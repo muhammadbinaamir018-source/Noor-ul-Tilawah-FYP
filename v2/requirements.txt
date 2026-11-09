@@ -1,0 +1,3 @@
+# Everything on one machine (models in-process, tools, tests).
+-r requirements-models.txt
+pytest

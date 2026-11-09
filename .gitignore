@@ -1,0 +1,41 @@
+# dependencies / build
+node_modules/
+frontend/dist/
+backend/.venv/
+__pycache__/
+.pytest_cache/
+
+# dev evaluation log (personal voice recordings)
+content/eval_log/
+# learner recordings collected for the evaluation, and evaluation outputs
+data/recordings/
+eval/results/
+
+# local settings — may contain the remote GPU token (see backend/.env.example)
+backend/.env
+
+# misc
+.DS_Store
+Thumbs.db
+*.log
+
+# NOTE: content/audio, content/pages and backend/models ARE tracked in this
+# private repo so the team can clone and run without re-importing assets.
+# They are third-party / derived binaries — see LICENSE-NOTE.md before sharing
+# this repo with anyone outside the FYP team.
+
+# makharij classifier runs (models and plots)
+ml/makharij/runs/
+data/progress/
+# Python virtual environment
+venv/
+.venv/
+**/venv/
+**/.venv/
+
+# Temporary Word files
+~$*
+
+# Python cache
+__pycache__/
+*.pyc

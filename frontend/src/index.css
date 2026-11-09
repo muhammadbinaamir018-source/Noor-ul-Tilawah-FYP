@@ -1,0 +1,796 @@
+/* ————————————————————————————————————————————————————————————
+   Tilawah — design tokens
+   The desk of a patient teacher: deep madrasa green, the Qaida's
+   own paper, brass fittings, green-black ink.
+   ———————————————————————————————————————————————————————————— */
+:root {
+  --desk: #12332e; /* deep teal-green: prayer-rug / madrasa tile */
+  --desk-deep: #0c2521;
+  --paper: #faf6ec; /* matches the scanned pages' paper */
+  --paper-shade: #efe8d8;
+  --ink: #1e2a26; /* green-black ink */
+  --ink-soft: #52605b;
+  --brass: #c29b4a; /* bookstand hardware; active/hover accent */
+  --brass-soft: #e2cf9f;
+  --sage: #3f7d5d; /* the teacher's tick */
+  --madder: #b3432b; /* gentle correction red, used sparingly */
+
+  --font-display: 'Amiri', serif;
+  --font-body: 'Alegreya Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--desk);
+  background-image: radial-gradient(ellipse at 50% -10%, #1a453e 0%, var(--desk) 55%, var(--desk-deep) 100%);
+  min-height: 100vh;
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--brass-soft);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--brass);
+}
+
+button {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--brass);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--brass-soft);
+  cursor: pointer;
+}
+button:hover:not(:disabled) {
+  background: var(--brass);
+  color: var(--desk-deep);
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+input,
+select {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--ink-soft);
+  border-radius: 2px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.error {
+  color: var(--madder);
+  padding: 2rem;
+}
+.hint {
+  color: var(--brass-soft);
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* ——— Home: the fihrist (title page + index) ——— */
+.home {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+  text-align: center;
+}
+.home h1 {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 6.5rem);
+  font-weight: 400;
+  margin: 0;
+  color: var(--paper);
+  letter-spacing: 0.02em;
+}
+.home .subtitle {
+  margin: 0.5rem auto 0;
+  color: var(--brass-soft);
+  font-size: 1.05rem;
+  font-style: italic;
+}
+.home .subtitle::after {
+  content: '';
+  display: block;
+  width: 7rem;
+  height: 1px;
+  margin: 2.5rem auto 0;
+  background: linear-gradient(90deg, transparent, var(--brass), transparent);
+}
+
+.lesson-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 0.9rem;
+  text-align: right;
+  direction: rtl;
+}
+.lesson-card {
+  background: color-mix(in srgb, var(--paper) 6%, transparent);
+  border: 1px solid color-mix(in srgb, var(--brass) 35%, transparent);
+  border-radius: 3px;
+  padding: 0.9rem 1.1rem;
+  transition: border-color 120ms ease, background 120ms ease;
+}
+.lesson-card:hover {
+  border-color: var(--brass);
+  background: color-mix(in srgb, var(--paper) 10%, transparent);
+}
+.lesson-card.unmapped {
+  opacity: 0.65;
+}
+.lesson-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--paper);
+  display: block;
+}
+.lesson-title .page-num {
+  color: var(--brass);
+  margin-inline-start: 0.4rem;
+}
+.lesson-meta {
+  direction: ltr;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.8rem;
+  color: var(--brass-soft);
+  opacity: 0.85;
+  margin-top: 0.3rem;
+  font-family: var(--font-mono);
+}
+.edit-link {
+  font-family: var(--font-body);
+  font-style: italic;
+}
+
+/* ——— Lesson: the page on the desk ——— */
+.lesson-page {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 7rem;
+}
+.lesson-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  padding: 0.4rem 0.2rem 1rem;
+}
+.lesson-header h2 {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--brass-soft);
+  margin: 0;
+}
+.lesson-header .hint {
+  margin-inline-start: auto;
+}
+.practice-btn {
+  font-weight: 700;
+}
+.play-ref-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--brass-soft);
+}
+.recite-progress {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--desk-deep);
+  background: var(--brass-soft);
+  border-radius: 2px;
+  padding: 0.1rem 0.45rem;
+}
+.recite-bar.phase-done {
+  border-top-color: var(--sage);
+}
+
+/* Background-check verdicts during a practice flow */
+.region-box.check-pending {
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--brass) 55%, transparent);
+}
+.region-box.check-correct {
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--sage) 70%, transparent);
+}
+.region-box.check-failed,
+.region-box.check-error {
+  box-shadow: inset 0 0 0 3px var(--madder);
+  background: color-mix(in srgb, var(--madder) 10%, transparent);
+}
+.recite-pending {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+.recite-failed-count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--madder);
+}
+.recite-review-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--madder);
+  color: var(--paper);
+  padding: 0.15rem 0.45rem;
+  border-radius: 2px;
+}
+
+/* State badge pinned to the letter being recited */
+.phase-badge {
+  position: absolute;
+  top: -0.7rem;
+  right: -0.7rem;
+  display: grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--brass);
+  pointer-events: none;
+  z-index: 3;
+}
+.phase-badge.badge-listening {
+  border-color: var(--madder);
+  animation: badge-pulse 1s ease-in-out infinite;
+}
+.phase-badge.badge-correct {
+  border-color: var(--sage);
+  background: var(--sage);
+  color: var(--paper);
+}
+.phase-badge.badge-incorrect {
+  border-color: var(--madder);
+  background: var(--madder);
+  color: var(--paper);
+}
+@keyframes badge-pulse {
+  50% {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--madder) 25%, transparent);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .phase-badge.badge-listening {
+    animation: none;
+  }
+}
+
+/* ——— Evaluation log ——— */
+.logs-page {
+  padding: 1rem 1.5rem 3rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+.logs-page .danger {
+  border-color: var(--madder);
+  color: var(--madder);
+}
+.logs-page .danger:hover {
+  background: var(--madder);
+  color: var(--paper);
+}
+.dev-links {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: color-mix(in srgb, var(--paper) 6%, transparent);
+  border: 1px solid color-mix(in srgb, var(--brass) 35%, transparent);
+}
+.log-table th,
+.log-table td {
+  padding: 0.4rem 0.7rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--brass) 20%, transparent);
+  text-align: left;
+}
+.log-table th {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brass-soft);
+}
+.log-table .mono {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+.log-table .ar {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+.log-table .variants {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: var(--brass-soft);
+}
+.log-table tr.verdict-correct td:nth-child(7) {
+  color: #7fc79f;
+}
+.log-table tr.verdict-incorrect td:nth-child(7),
+.log-table tr.verdict-unclear td:nth-child(7) {
+  color: #e08b74;
+}
+
+.page-image-wrap {
+  position: relative;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 12px 40px rgba(0, 0, 0, 0.45);
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--paper);
+}
+.page-image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+.page-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/* Hotspots: invisible until touched, like a finger tracing the page */
+.region-box {
+  position: absolute;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.region-box.recitable:hover,
+.region-box.play-only:hover {
+  box-shadow: inset 0 0 0 2px var(--brass);
+  background: color-mix(in srgb, var(--brass) 12%, transparent);
+}
+.region-box.recitable:hover {
+  box-shadow: inset 0 0 0 2px var(--sage);
+  background: color-mix(in srgb, var(--sage) 10%, transparent);
+}
+.region-box.active {
+  box-shadow: inset 0 0 0 2px var(--brass);
+  animation: breathe 1.6s ease-in-out infinite;
+}
+.region-box.active.flash-correct {
+  animation: none;
+  box-shadow: inset 0 0 0 3px var(--sage);
+  background: color-mix(in srgb, var(--sage) 18%, transparent);
+}
+.region-box.active.flash-incorrect {
+  animation: none;
+  box-shadow: inset 0 0 0 3px var(--madder);
+  background: color-mix(in srgb, var(--madder) 12%, transparent);
+}
+@keyframes breathe {
+  0%,
+  100% {
+    background: color-mix(in srgb, var(--brass) 6%, transparent);
+  }
+  50% {
+    background: color-mix(in srgb, var(--brass) 18%, transparent);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .region-box.active {
+    animation: none;
+    background: color-mix(in srgb, var(--brass) 12%, transparent);
+  }
+}
+
+/* ——— The teacher's strip (recite bar) ——— */
+.recite-bar {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.7rem 1.3rem;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 3px;
+  border-top: 3px solid var(--brass);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  max-width: min(92vw, 44rem);
+}
+.recite-status {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+.recite-bar.phase-correct {
+  border-top-color: var(--sage);
+}
+.recite-bar.phase-incorrect,
+.recite-bar.phase-moveon {
+  border-top-color: var(--madder);
+}
+.recite-attempt,
+.recite-heard {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+.recite-error {
+  color: var(--madder);
+  font-size: 0.85rem;
+  max-width: 20rem;
+}
+.mic-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--madder);
+  animation: pulse 1.1s ease-in-out infinite;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.25;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mic-dot {
+    animation: none;
+  }
+}
+.recite-bar button {
+  border-color: var(--ink-soft);
+  color: var(--ink);
+}
+.recite-bar button:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.recite-cancel {
+  border: none;
+  padding: 0.2rem 0.4rem;
+}
+
+/* ——— Editor: the workbench ——— */
+.editor-page {
+  padding: 1rem 1.5rem 3rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+.editor-header {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+  padding-bottom: 0.8rem;
+}
+.editor-header h2 {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--brass-soft);
+  margin: 0;
+}
+.editor-header label {
+  font-size: 0.9rem;
+  color: var(--brass-soft);
+}
+.editor-progress {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--brass-soft);
+  margin-inline-start: auto;
+}
+.save-btn {
+  font-weight: 700;
+}
+.editor-message {
+  font-size: 0.85rem;
+  color: var(--brass-soft);
+  margin: 0 0 0.6rem;
+}
+.editor-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 20rem;
+  gap: 1.2rem;
+  align-items: start;
+}
+@media (max-width: 60rem) {
+  .editor-body {
+    grid-template-columns: 1fr;
+  }
+}
+.editor-canvas .page-image-wrap {
+  max-width: 46rem;
+  margin: 0 auto;
+}
+.editor-side {
+  background: color-mix(in srgb, var(--paper) 7%, transparent);
+  border: 1px solid color-mix(in srgb, var(--brass) 35%, transparent);
+  border-radius: 3px;
+  padding: 1rem 1.1rem;
+  position: sticky;
+  top: 1rem;
+}
+.region-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.region-editor h3 {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--brass-soft);
+  margin: 0;
+}
+.region-editor label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--brass-soft);
+}
+.region-editor input[dir='rtl'] {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+}
+.region-editor .danger {
+  border-color: var(--madder);
+  color: var(--madder);
+}
+.region-editor .danger:hover {
+  background: var(--madder);
+  color: var(--paper);
+}
+
+.editor-region {
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--brass) 65%, transparent);
+  background: color-mix(in srgb, var(--brass) 7%, transparent);
+}
+.editor-region.has-expected {
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--sage) 80%, transparent);
+}
+.editor-region.selected {
+  box-shadow: inset 0 0 0 2.5px var(--madder);
+  z-index: 2;
+}
+.region-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1;
+  padding: 1px 3px;
+  background: color-mix(in srgb, var(--desk) 80%, transparent);
+  color: var(--brass-soft);
+  border-radius: 0 0 3px 0;
+  pointer-events: none;
+}
+.drag-preview {
+  box-shadow: inset 0 0 0 2px var(--madder);
+  background: color-mix(in srgb, var(--madder) 8%, transparent);
+  pointer-events: none;
+}
+
+/* ---- /collect: recording collection ---------------------------------------- */
+.collect-page {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+}
+.collect-card {
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 3px;
+  border-top: 3px solid var(--brass);
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+.collect-card p {
+  margin: 0;
+  align-self: stretch;
+}
+.collect-field {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  align-self: stretch;
+}
+.collect-field select {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.2rem 0.4rem;
+}
+.collect-cell {
+  background-repeat: no-repeat;
+  border: 1px solid var(--paper-shade);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+.collect-text {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  line-height: 1.3;
+}
+.collect-mode {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+.collect-link {
+  border: none;
+  padding: 0;
+  color: var(--sage);
+  font-size: 0.9rem;
+}
+.collect-link:hover:not(:disabled) {
+  background: transparent;
+  color: var(--brass);
+  text-decoration: underline;
+}
+.collect-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  min-height: 2.6rem;
+}
+.collect-card button {
+  color: var(--ink);
+  border-color: var(--brass);
+}
+.collect-card .practice-btn {
+  background: var(--brass);
+  color: var(--desk-deep);
+}
+.collect-card .practice-btn:disabled {
+  background: var(--paper-shade);
+  color: var(--ink-soft);
+}
+
+/* ---- specific feedback on a miss (ReciteControls) --------------------------- */
+.recite-feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--ink-soft);
+  max-width: 22rem;
+}
+.recite-feedback b {
+  color: var(--madder);
+  font-weight: 600;
+}
+.recite-madd {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--sage);
+}
+.recite-bar.low-confidence {
+  border-top-color: var(--brass);
+}
+
+/* ---- home: per-learner progress --------------------------------------------- */
+.progress-panel {
+  margin: 2rem auto 0;
+  max-width: 34rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+.learner-field {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  color: var(--brass-soft);
+  font-style: italic;
+}
+.learner-field input {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding: 0.15rem 0.5rem;
+  background: color-mix(in srgb, var(--paper) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--brass) 45%, transparent);
+  border-radius: 2px;
+  color: var(--paper);
+  width: 11rem;
+}
+.progress-counts {
+  margin: 0.5rem 0 0;
+  color: var(--brass-soft);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+.weak-letters {
+  margin: 0.6rem 0 0;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.weak-letter {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--madder);
+  border-radius: 2px;
+  color: var(--paper);
+}
+.revise h3 {
+  margin: 0.9rem 0 0.3rem;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--paper);
+}
+.revise ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.revise li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--brass) 25%, transparent);
+  padding-bottom: 0.2rem;
+}
+.revise-text {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--paper);
+}
+.revise-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--brass-soft);
+}
+.progress-reset {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+}

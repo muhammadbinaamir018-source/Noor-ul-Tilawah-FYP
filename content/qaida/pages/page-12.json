@@ -1,0 +1,739 @@
+{
+  "id": "p12",
+  "image": "_12.jpg",
+  "audioPage": "04",
+  "regions": [
+    {
+      "id": "p12-r001",
+      "rect": {
+        "x": 0.0611,
+        "y": 0.0442,
+        "w": 0.8778,
+        "h": 0.0143
+      },
+      "audio": "a04093.mp3",
+      "row": 1
+    },
+    {
+      "id": "p12-r002",
+      "rect": {
+        "x": 0.0611,
+        "y": 0.0522,
+        "w": 0.8778,
+        "h": 0.0796
+      },
+      "audio": "a04094.mp3",
+      "row": 1
+    },
+    {
+      "id": "p12-r003",
+      "rect": {
+        "x": 0.8315,
+        "y": 0.1368,
+        "w": 0.1074,
+        "h": 0.0896
+      },
+      "audio": "a04095.mp3",
+      "row": 2,
+      "expected": {
+        "text": "اُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r004",
+      "rect": {
+        "x": 0.7213,
+        "y": 0.1368,
+        "w": 0.1065,
+        "h": 0.0896
+      },
+      "audio": "a04096.mp3",
+      "row": 2,
+      "expected": {
+        "text": "بُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r005",
+      "rect": {
+        "x": 0.612,
+        "y": 0.1368,
+        "w": 0.1056,
+        "h": 0.0896
+      },
+      "audio": "a04097.mp3",
+      "row": 2,
+      "expected": {
+        "text": "تُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r006",
+      "rect": {
+        "x": 0.5019,
+        "y": 0.1368,
+        "w": 0.1065,
+        "h": 0.0896
+      },
+      "audio": "a04098.mp3",
+      "row": 2,
+      "expected": {
+        "text": "ثُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r007",
+      "rect": {
+        "x": 0.3926,
+        "y": 0.1368,
+        "w": 0.1065,
+        "h": 0.0896
+      },
+      "audio": "a04099.mp3",
+      "row": 2,
+      "expected": {
+        "text": "جُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r008",
+      "rect": {
+        "x": 0.2824,
+        "y": 0.1368,
+        "w": 0.1065,
+        "h": 0.0896
+      },
+      "audio": "a04100.mp3",
+      "row": 2,
+      "expected": {
+        "text": "حُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r009",
+      "rect": {
+        "x": 0.1731,
+        "y": 0.1368,
+        "w": 0.1065,
+        "h": 0.0896
+      },
+      "audio": "a04101.mp3",
+      "row": 2,
+      "expected": {
+        "text": "خُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r010",
+      "rect": {
+        "x": 0.0611,
+        "y": 0.1368,
+        "w": 0.1083,
+        "h": 0.0896
+      },
+      "audio": "a04102.mp3",
+      "row": 2,
+      "expected": {
+        "text": "دُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r011",
+      "rect": {
+        "x": 0.8315,
+        "y": 0.2282,
+        "w": 0.1074,
+        "h": 0.0896
+      },
+      "audio": "a04103.mp3",
+      "row": 3,
+      "expected": {
+        "text": "ذُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r012",
+      "rect": {
+        "x": 0.7213,
+        "y": 0.2282,
+        "w": 0.1065,
+        "h": 0.0896
+      },
+      "audio": "a04104.mp3",
+      "row": 3,
+      "expected": {
+        "text": "رُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r013",
+      "rect": {
+        "x": 0.612,
+        "y": 0.2282,
+        "w": 0.1056,
+        "h": 0.0896
+      },
+      "audio": "a04105.mp3",
+      "row": 3,
+      "expected": {
+        "text": "زُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r014",
+      "rect": {
+        "x": 0.5019,
+        "y": 0.2282,
+        "w": 0.1065,
+        "h": 0.0896
+      },
+      "audio": "a04106.mp3",
+      "row": 3,
+      "expected": {
+        "text": "سُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r015",
+      "rect": {
+        "x": 0.3926,
+        "y": 0.2282,
+        "w": 0.1065,
+        "h": 0.0896
+      },
+      "audio": "a04107.mp3",
+      "row": 3,
+      "expected": {
+        "text": "شُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r016",
+      "rect": {
+        "x": 0.2824,
+        "y": 0.2282,
+        "w": 0.1065,
+        "h": 0.0896
+      },
+      "audio": "a04108.mp3",
+      "row": 3,
+      "expected": {
+        "text": "صُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r017",
+      "rect": {
+        "x": 0.1731,
+        "y": 0.2282,
+        "w": 0.1065,
+        "h": 0.0896
+      },
+      "audio": "a04109.mp3",
+      "row": 3,
+      "expected": {
+        "text": "ضُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r018",
+      "rect": {
+        "x": 0.0611,
+        "y": 0.2282,
+        "w": 0.1083,
+        "h": 0.0896
+      },
+      "audio": "a04110.mp3",
+      "row": 3,
+      "expected": {
+        "text": "طُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r019",
+      "rect": {
+        "x": 0.8315,
+        "y": 0.3203,
+        "w": 0.1074,
+        "h": 0.0889
+      },
+      "audio": "a04111.mp3",
+      "row": 4,
+      "expected": {
+        "text": "ظُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r020",
+      "rect": {
+        "x": 0.7213,
+        "y": 0.3203,
+        "w": 0.1065,
+        "h": 0.0889
+      },
+      "audio": "a04112.mp3",
+      "row": 4,
+      "expected": {
+        "text": "عُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r021",
+      "rect": {
+        "x": 0.612,
+        "y": 0.3203,
+        "w": 0.1056,
+        "h": 0.0889
+      },
+      "audio": "a04113.mp3",
+      "row": 4,
+      "expected": {
+        "text": "غُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r022",
+      "rect": {
+        "x": 0.5019,
+        "y": 0.3203,
+        "w": 0.1065,
+        "h": 0.0889
+      },
+      "audio": "a04114.mp3",
+      "row": 4,
+      "expected": {
+        "text": "فُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r023",
+      "rect": {
+        "x": 0.3926,
+        "y": 0.3203,
+        "w": 0.1065,
+        "h": 0.0889
+      },
+      "audio": "a04115.mp3",
+      "row": 4,
+      "expected": {
+        "text": "قُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r024",
+      "rect": {
+        "x": 0.2824,
+        "y": 0.3203,
+        "w": 0.1065,
+        "h": 0.0889
+      },
+      "audio": "a04116.mp3",
+      "row": 4,
+      "expected": {
+        "text": "كُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r025",
+      "rect": {
+        "x": 0.1731,
+        "y": 0.3203,
+        "w": 0.1065,
+        "h": 0.0889
+      },
+      "audio": "a04117.mp3",
+      "row": 4,
+      "expected": {
+        "text": "لُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r026",
+      "rect": {
+        "x": 0.0611,
+        "y": 0.3203,
+        "w": 0.1083,
+        "h": 0.0889
+      },
+      "audio": "a04118.mp3",
+      "row": 4,
+      "expected": {
+        "text": "مُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r027",
+      "rect": {
+        "x": 0.7213,
+        "y": 0.4117,
+        "w": 0.1065,
+        "h": 0.0889
+      },
+      "audio": "a04119.mp3",
+      "row": 5,
+      "expected": {
+        "text": "نُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r028",
+      "rect": {
+        "x": 0.612,
+        "y": 0.4117,
+        "w": 0.1056,
+        "h": 0.0889
+      },
+      "audio": "a04120.mp3",
+      "row": 5,
+      "expected": {
+        "text": "وُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r029",
+      "rect": {
+        "x": 0.5019,
+        "y": 0.4117,
+        "w": 0.1065,
+        "h": 0.0889
+      },
+      "audio": "a04121.mp3",
+      "row": 5,
+      "expected": {
+        "text": "هُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r030",
+      "rect": {
+        "x": 0.3926,
+        "y": 0.4117,
+        "w": 0.1065,
+        "h": 0.0889
+      },
+      "audio": "a04122.mp3",
+      "row": 5,
+      "expected": {
+        "text": "ءُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r031",
+      "rect": {
+        "x": 0.2824,
+        "y": 0.4117,
+        "w": 0.1065,
+        "h": 0.0889
+      },
+      "audio": "a04123.mp3",
+      "row": 5,
+      "expected": {
+        "text": "يُوْ",
+        "variants": [],
+        "mode": "syllable"
+      }
+    },
+    {
+      "id": "p12-r032",
+      "rect": {
+        "x": 0.0611,
+        "y": 0.5031,
+        "w": 0.8778,
+        "h": 0.0454
+      },
+      "audio": "a04124.mp3",
+      "row": 6
+    },
+    {
+      "id": "p12-r033",
+      "rect": {
+        "x": 0.7213,
+        "y": 0.5504,
+        "w": 0.2176,
+        "h": 0.0883
+      },
+      "audio": "a04125.mp3",
+      "row": 7,
+      "expected": {
+        "text": "نُوْحُ",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r034",
+      "rect": {
+        "x": 0.5019,
+        "y": 0.5504,
+        "w": 0.2157,
+        "h": 0.0883
+      },
+      "audio": "a04126.mp3",
+      "row": 7,
+      "expected": {
+        "text": "طُوْرُ",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r035",
+      "rect": {
+        "x": 0.2824,
+        "y": 0.5504,
+        "w": 0.2167,
+        "h": 0.0883
+      },
+      "audio": "a04127.mp3",
+      "row": 7,
+      "expected": {
+        "text": "تُوْبُوْا",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r036",
+      "rect": {
+        "x": 0.0611,
+        "y": 0.5504,
+        "w": 0.2185,
+        "h": 0.0883
+      },
+      "audio": "a04128.mp3",
+      "row": 7,
+      "expected": {
+        "text": "نُوْرُ",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r037",
+      "rect": {
+        "x": 0.7213,
+        "y": 0.6412,
+        "w": 0.2176,
+        "h": 0.0877
+      },
+      "audio": "a04129.mp3",
+      "row": 8,
+      "expected": {
+        "text": "قَالُوْا",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r038",
+      "rect": {
+        "x": 0.5019,
+        "y": 0.6412,
+        "w": 0.2157,
+        "h": 0.0877
+      },
+      "audio": "a04130.mp3",
+      "row": 8,
+      "expected": {
+        "text": "يُوْحِيْ",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r039",
+      "rect": {
+        "x": 0.2824,
+        "y": 0.6412,
+        "w": 0.2167,
+        "h": 0.0877
+      },
+      "audio": "a04131.mp3",
+      "row": 8,
+      "expected": {
+        "text": "يَقُوْمُ",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r040",
+      "rect": {
+        "x": 0.0611,
+        "y": 0.6412,
+        "w": 0.2185,
+        "h": 0.0877
+      },
+      "audio": "a04132.mp3",
+      "row": 8,
+      "expected": {
+        "text": "تَكُوْنُ",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r041",
+      "rect": {
+        "x": 0.0611,
+        "y": 0.7313,
+        "w": 0.8778,
+        "h": 0.0448
+      },
+      "audio": "a04133.mp3",
+      "row": 9
+    },
+    {
+      "id": "p12-r042",
+      "rect": {
+        "x": 0.7213,
+        "y": 0.7786,
+        "w": 0.2176,
+        "h": 0.0889
+      },
+      "audio": "a04134.mp3",
+      "row": 10,
+      "expected": {
+        "text": "مُسْلِمُوْنَ",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r043",
+      "rect": {
+        "x": 0.5019,
+        "y": 0.7786,
+        "w": 0.2157,
+        "h": 0.0889
+      },
+      "audio": "a04135.mp3",
+      "row": 10,
+      "expected": {
+        "text": "قَارُوْنُ",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r044",
+      "rect": {
+        "x": 0.2824,
+        "y": 0.7786,
+        "w": 0.2167,
+        "h": 0.0889
+      },
+      "audio": "a04136.mp3",
+      "row": 10,
+      "expected": {
+        "text": "دَاخِرُوْنَ",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r045",
+      "rect": {
+        "x": 0.0611,
+        "y": 0.7786,
+        "w": 0.2185,
+        "h": 0.0889
+      },
+      "audio": "a04137.mp3",
+      "row": 10,
+      "expected": {
+        "text": "سَبَقُوْنَا",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r046",
+      "rect": {
+        "x": 0.5019,
+        "y": 0.87,
+        "w": 0.2157,
+        "h": 0.0889
+      },
+      "audio": "a04138.mp3",
+      "row": 11,
+      "expected": {
+        "text": "بَاسِطُوْنَ",
+        "variants": [],
+        "mode": "word"
+      }
+    },
+    {
+      "id": "p12-r047",
+      "rect": {
+        "x": 0.2824,
+        "y": 0.87,
+        "w": 0.2167,
+        "h": 0.0889
+      },
+      "audio": "a04139.mp3",
+      "row": 11,
+      "expected": {
+        "text": "رَاجِعُوْنَ",
+        "variants": [],
+        "mode": "word"
+      }
+    }
+  ]
+}

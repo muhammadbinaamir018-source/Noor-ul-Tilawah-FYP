@@ -1,0 +1,8 @@
+# App server only (UI, streaming, alignment, letter scoring, verification).
+# Enough on its own when MODEL_SERVICE_URL points at a model service.
+fastapi
+uvicorn[standard]
+numpy
+scipy
+soundfile
+onnxruntime

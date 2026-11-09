@@ -1,0 +1,7 @@
+# Model service / in-process models (heavy). On a CUDA machine, install the matching
+# torch build from https://pytorch.org instead of the CPU index below.
+--extra-index-url https://download.pytorch.org/whl/cpu
+-r requirements-app.txt
+torch
+transformers
+faster-whisper

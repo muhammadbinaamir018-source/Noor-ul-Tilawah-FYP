@@ -1,0 +1,3 @@
+# Optional, for wav2vec2 features in ml/makharij (large downloads):
+torch
+transformers

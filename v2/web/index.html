@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tilawah Coach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="mark">ت</span>
+      <div>
+        <h1>Tilawah Coach</h1>
+        <p>Quran recitation &amp; pronunciation assessment</p>
+      </div>
+    </div>
+    <div class="models" id="models"></div>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label>Surah
+        <select id="surah"></select>
+      </label>
+      <label>Ayah
+        <span class="range">
+          <input id="from" type="number" min="1" value="1"> – <input id="to" type="number" min="1" value="1">
+        </span>
+      </label>
+      <label>Level
+        <select id="learner-level" title="Which approximations of hard letters (e.g. ض) are accepted">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced (tajweed)</option>
+        </select>
+      </label>
+      <div class="actions">
+        <button id="mic" class="primary" disabled>
+          <span class="dot"></span><span id="mic-label">Start reciting</span>
+        </button>
+        <label class="file-btn" id="file-label" title="Stream a recording through the same live pipeline">
+          <input id="file" type="file" accept="audio/*" disabled>Use a recording
+        </label>
+      </div>
+      <div class="meter"><div id="level"></div></div>
+    </section>
+
+    <div class="layout">
+      <section class="mushaf-wrap">
+        <div id="status" class="status">Loading models…</div>
+        <div id="mushaf" class="mushaf" dir="rtl" lang="ar"></div>
+        <div class="legend">
+          <span class="lg correct">correct</span>
+          <span class="lg close">close</span>
+          <span class="lg wrong">wrong word</span>
+          <span class="lg missing">skipped</span>
+          <span class="lg extra">extra</span>
+          <span class="lg letter">weak letter</span>
+        </div>
+      </section>
+
+      <aside class="side">
+        <h2>Feedback</h2>
+        <ol id="feedback" class="feedback"><li class="empty">Recite to see corrections here.</li></ol>
+        <div id="retry" class="retry"></div>
+
+        <h2>Heard</h2>
+        <p id="transcript" class="transcript" dir="rtl" lang="ar"></p>
+
+        <h2>Performance</h2>
+        <dl id="stats" class="stats"></dl>
+      </aside>
+    </div>
+  </main>
+
+  <div id="tip" class="tip" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
